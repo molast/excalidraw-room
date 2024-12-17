@@ -30,6 +30,7 @@ jobs:
           tag_with_ref: true
           tag_with_sha: true
 
+
       # 登出 TCR
       - name: Logout from Tencent Cloud TCR
         run: docker logout ccr.ccs.tencent.com  # 推送完成后登出
