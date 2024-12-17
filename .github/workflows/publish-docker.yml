@@ -19,7 +19,7 @@ jobs:
         env:
           TCR_USERNAME: ${{ secrets.TCR_USERNAME }}  # 从 Secrets 获取 TCR 用户名
           TCR_PASSWORD: ${{ secrets.TCR_PASSWORD }}  # 从 Secrets 获取 TCR 密码
-          TCR_REGISTRY_URL: ccr.ccs.tencent.com  # 腾讯云 TCR 的登录地址
+          TCR_REGISTRY_URL: ccr.ccs.tencentyun.com   # 腾讯云 TCR 的登录地址
           
       # 构建并推送 Docker 镜像到 TCR
       - name: Build and push Docker image
