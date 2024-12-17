@@ -18,7 +18,7 @@ jobs:
         with:
           username: ${{ secrets.TCR_USERNAME }}  # 从 Secrets 获取 TCR 用户名
           password: ${{ secrets.TCR_PASSWORD }}  # 从 Secrets 获取 TCR 密码
-          registry: ccr.ccs.tencent.com  # 腾讯云 TCR 登录地址
+          registry: ccr.ccs.tencentyun.com  # 腾讯云 TCR 登录地址
           
       # 构建并推送 Docker 镜像到 TCR
       - name: Build and push Docker image
@@ -26,11 +26,11 @@ jobs:
         with:
           context: .
           push: true
-          tags: ccr.ccs.tencent.com/YOUR_NAMESPACE/YOUR_REPO_NAME:latest  # 替换为 TCR 仓库路径
+          tags: ccr.ccs.tencent.com/chenaimin/excalidraw-room:latest  # 替换为 TCR 仓库路径
           tag_with_ref: true
           tag_with_sha: true
 
 
       # 登出 TCR
       - name: Logout from Tencent Cloud TCR
-        run: docker logout ccr.ccs.tencent.com  # 推送完成后登出
+        run: docker logout ccr.ccs.tencentyun.com  # 推送完成后登出
